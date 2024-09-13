@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="meal"
+            type="com.mehedi.kikhabo.domain.model.MealItem" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        app:cardElevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/mealImage"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder"
+                app:layout_constraintDimensionRatio="1:1"
+                app:urlToImg="@{meal.thumbImageUrl}" />
+
+            <TextView
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#70FF5722"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@{meal.title}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="#fff"
+                app:layout_constraintBottom_toBottomOf="@id/mealImage"
+                app:layout_constraintEnd_toEndOf="@id/mealImage"
+                app:layout_constraintStart_toStartOf="@id/mealImage" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>
