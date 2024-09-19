@@ -15,7 +15,7 @@ class GetMealDetailsUseCase @Inject constructor(private val repository: MealRepo
 
 
     operator fun invoke(mealId: String): Flow<Resource<List<MealDetails?>?>> = flow {
-        val data = repository.getMealDetails(mealId)
+
         try {
             emit(Resource.Loading())
             val data = repository.getMealDetails(mealId)
