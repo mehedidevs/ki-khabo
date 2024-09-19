@@ -1,5 +1,6 @@
 package com.mehedi.kikhabo.presentation.details
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.mehedi.kikhabo.core.Resource
@@ -24,7 +25,7 @@ class DetailsViewModel @Inject constructor(private val useCase: GetMealDetailsUs
 
         viewModelScope.launch {
             useCase.invoke(mealId).collect { response ->
-
+                Log.d("DetailsViewModel", "getMealDetailsData: $response ")
                 when (response) {
                     is Resource.Error -> {
                         _homeMeal.value = DetailsDataState(error = response.message)
