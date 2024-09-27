@@ -36,9 +36,9 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
-    buildFeatures{
-        dataBinding=true
-        viewBinding =true
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
     }
 }
 
@@ -86,6 +86,8 @@ dependencies {
     
     // Timber
     implementation(libs.timber)
+    //Flexbox
+    implementation(libs.flexbox)
     
     // Testing
     testImplementation(libs.junit)

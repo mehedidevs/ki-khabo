@@ -111,7 +111,7 @@ class DetailsActivity : AppCompatActivity() {
         
         ingredients.forEachIndexed { index, ingredient ->
             val ingredientItem = TextView(this)
-            ingredientItem.text = "${index + 1}.$ingredient"
+            ingredientItem.text = " ${index + 1}.$ingredient "
             ingredientItem.layoutParams = LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT,

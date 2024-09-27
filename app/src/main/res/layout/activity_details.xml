@@ -108,12 +108,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_instructions" />
 
-            <LinearLayout
+            <com.google.android.flexbox.FlexboxLayout
                 android:id="@+id/ingredients_layout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:orientation="vertical"
+                android:orientation="horizontal"
+                app:flexDirection="row"
+                app:flexWrap="wrap"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_ingredients_label" />
